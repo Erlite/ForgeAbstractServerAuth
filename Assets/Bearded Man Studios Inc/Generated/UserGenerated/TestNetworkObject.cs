@@ -8,7 +8,7 @@ namespace BeardedManStudios.Forge.Networking.Generated
 	[GeneratedInterpol("{\"inter\":[0,0,0,0,0,0,0,0,0.15,0,0,0]")]
 	public partial class TestNetworkObject : NetworkObject
 	{
-		public const int IDENTITY = 5;
+		public const int IDENTITY = 10;
 
 		private byte[] _dirtyFields = new byte[2];
 
@@ -500,6 +500,10 @@ namespace BeardedManStudios.Forge.Networking.Generated
 			if ((0x8 & _dirtyFields[1]) != 0)
 				UnityObjectMapper.Instance.MapBytes(dirtyFieldsData, _fieldDouble);
 
+			// Reset all the dirty fields
+			for (int i = 0; i < _dirtyFields.Length; i++)
+				_dirtyFields[i] = 0;
+
 			return dirtyFieldsData;
 		}
 
@@ -677,62 +681,62 @@ namespace BeardedManStudios.Forge.Networking.Generated
 			if (fieldByteInterpolation.Enabled && !fieldByteInterpolation.current.UnityNear(fieldByteInterpolation.target, 0.0015f))
 			{
 				_fieldByte = (byte)fieldByteInterpolation.Interpolate();
-				RunChange_fieldByte(fieldByteInterpolation.Timestep);
+				//RunChange_fieldByte(fieldByteInterpolation.Timestep);
 			}
 			if (fieldCharInterpolation.Enabled && !fieldCharInterpolation.current.UnityNear(fieldCharInterpolation.target, 0.0015f))
 			{
 				_fieldChar = (char)fieldCharInterpolation.Interpolate();
-				RunChange_fieldChar(fieldCharInterpolation.Timestep);
+				//RunChange_fieldChar(fieldCharInterpolation.Timestep);
 			}
 			if (fieldShortInterpolation.Enabled && !fieldShortInterpolation.current.UnityNear(fieldShortInterpolation.target, 0.0015f))
 			{
 				_fieldShort = (short)fieldShortInterpolation.Interpolate();
-				RunChange_fieldShort(fieldShortInterpolation.Timestep);
+				//RunChange_fieldShort(fieldShortInterpolation.Timestep);
 			}
 			if (fieldUShortInterpolation.Enabled && !fieldUShortInterpolation.current.UnityNear(fieldUShortInterpolation.target, 0.0015f))
 			{
 				_fieldUShort = (ushort)fieldUShortInterpolation.Interpolate();
-				RunChange_fieldUShort(fieldUShortInterpolation.Timestep);
+				//RunChange_fieldUShort(fieldUShortInterpolation.Timestep);
 			}
 			if (fieldBoolInterpolation.Enabled && !fieldBoolInterpolation.current.UnityNear(fieldBoolInterpolation.target, 0.0015f))
 			{
 				_fieldBool = (bool)fieldBoolInterpolation.Interpolate();
-				RunChange_fieldBool(fieldBoolInterpolation.Timestep);
+				//RunChange_fieldBool(fieldBoolInterpolation.Timestep);
 			}
 			if (fieldIntInterpolation.Enabled && !fieldIntInterpolation.current.UnityNear(fieldIntInterpolation.target, 0.0015f))
 			{
 				_fieldInt = (int)fieldIntInterpolation.Interpolate();
-				RunChange_fieldInt(fieldIntInterpolation.Timestep);
+				//RunChange_fieldInt(fieldIntInterpolation.Timestep);
 			}
 			if (fieldUIntInterpolation.Enabled && !fieldUIntInterpolation.current.UnityNear(fieldUIntInterpolation.target, 0.0015f))
 			{
 				_fieldUInt = (uint)fieldUIntInterpolation.Interpolate();
-				RunChange_fieldUInt(fieldUIntInterpolation.Timestep);
+				//RunChange_fieldUInt(fieldUIntInterpolation.Timestep);
 			}
 			if (fieldFloatInterpolation.Enabled && !fieldFloatInterpolation.current.UnityNear(fieldFloatInterpolation.target, 0.0015f))
 			{
 				_fieldFloat = (float)fieldFloatInterpolation.Interpolate();
-				RunChange_fieldFloat(fieldFloatInterpolation.Timestep);
+				//RunChange_fieldFloat(fieldFloatInterpolation.Timestep);
 			}
 			if (fieldFloatInterpolateInterpolation.Enabled && !fieldFloatInterpolateInterpolation.current.UnityNear(fieldFloatInterpolateInterpolation.target, 0.0015f))
 			{
 				_fieldFloatInterpolate = (float)fieldFloatInterpolateInterpolation.Interpolate();
-				RunChange_fieldFloatInterpolate(fieldFloatInterpolateInterpolation.Timestep);
+				//RunChange_fieldFloatInterpolate(fieldFloatInterpolateInterpolation.Timestep);
 			}
 			if (fieldLongInterpolation.Enabled && !fieldLongInterpolation.current.UnityNear(fieldLongInterpolation.target, 0.0015f))
 			{
 				_fieldLong = (long)fieldLongInterpolation.Interpolate();
-				RunChange_fieldLong(fieldLongInterpolation.Timestep);
+				//RunChange_fieldLong(fieldLongInterpolation.Timestep);
 			}
 			if (fieldULongInterpolation.Enabled && !fieldULongInterpolation.current.UnityNear(fieldULongInterpolation.target, 0.0015f))
 			{
 				_fieldULong = (ulong)fieldULongInterpolation.Interpolate();
-				RunChange_fieldULong(fieldULongInterpolation.Timestep);
+				//RunChange_fieldULong(fieldULongInterpolation.Timestep);
 			}
 			if (fieldDoubleInterpolation.Enabled && !fieldDoubleInterpolation.current.UnityNear(fieldDoubleInterpolation.target, 0.0015f))
 			{
 				_fieldDouble = (double)fieldDoubleInterpolation.Interpolate();
-				RunChange_fieldDouble(fieldDoubleInterpolation.Timestep);
+				//RunChange_fieldDouble(fieldDoubleInterpolation.Timestep);
 			}
 		}
 

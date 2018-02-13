@@ -39,6 +39,26 @@ namespace BeardedManStudios.Forge.Networking.Generated
 						availableCallback = true;
 						obj = new NetworkCameraNetworkObject(networker, id, frame);
 						break;
+					case NetworkComponentDisablerNetworkObject.IDENTITY:
+						availableCallback = true;
+						obj = new NetworkComponentDisablerNetworkObject(networker, id, frame);
+						break;
+					case NetworkControlledEntityNetworkObject.IDENTITY:
+						availableCallback = true;
+						obj = new NetworkControlledEntityNetworkObject(networker, id, frame);
+						break;
+					case NetworkedInputControllerNetworkObject.IDENTITY:
+						availableCallback = true;
+						obj = new NetworkedInputControllerNetworkObject(networker, id, frame);
+						break;
+					case NetworkGameManagerNetworkObject.IDENTITY:
+						availableCallback = true;
+						obj = new NetworkGameManagerNetworkObject(networker, id, frame);
+						break;
+					case SpawnManagerNetworkObject.IDENTITY:
+						availableCallback = true;
+						obj = new SpawnManagerNetworkObject(networker, id, frame);
+						break;
 					case TestNetworkObject.IDENTITY:
 						availableCallback = true;
 						obj = new TestNetworkObject(networker, id, frame);

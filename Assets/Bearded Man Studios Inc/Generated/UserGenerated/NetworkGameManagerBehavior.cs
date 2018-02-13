@@ -4,13 +4,12 @@ using UnityEngine;
 
 namespace BeardedManStudios.Forge.Networking.Generated
 {
-	[GeneratedRPC("{\"types\":[[\"Color\"]]")]
-	[GeneratedRPCVariableNames("{\"types\":[[\"color\"]]")]
-	public abstract partial class ExampleProximityPlayerBehavior : NetworkBehavior
+	[GeneratedRPC("{\"types\":[]")]
+	[GeneratedRPCVariableNames("{\"types\":[]")]
+	public abstract partial class NetworkGameManagerBehavior : NetworkBehavior
 	{
-		public const byte RPC_SEND_COLOR = 0 + 5;
 		
-		public ExampleProximityPlayerNetworkObject networkObject = null;
+		public NetworkGameManagerNetworkObject networkObject = null;
 
 		public override void Initialize(NetworkObject obj)
 		{
@@ -18,11 +17,10 @@ namespace BeardedManStudios.Forge.Networking.Generated
 			if (networkObject != null && networkObject.AttachedBehavior != null)
 				return;
 			
-			networkObject = (ExampleProximityPlayerNetworkObject)obj;
+			networkObject = (NetworkGameManagerNetworkObject)obj;
 			networkObject.AttachedBehavior = this;
 
 			base.SetupHelperRpcs(networkObject);
-			networkObject.RegisterRpc("SendColor", SendColor, typeof(Color));
 
 			networkObject.onDestroy += DestroyGameObject;
 
@@ -78,7 +76,7 @@ namespace BeardedManStudios.Forge.Networking.Generated
 
 		public override void Initialize(NetWorker networker, byte[] metadata = null)
 		{
-			Initialize(new ExampleProximityPlayerNetworkObject(networker, createCode: TempAttachCode, metadata: metadata));
+			Initialize(new NetworkGameManagerNetworkObject(networker, createCode: TempAttachCode, metadata: metadata));
 		}
 
 		private void DestroyGameObject(NetWorker sender)
@@ -89,7 +87,7 @@ namespace BeardedManStudios.Forge.Networking.Generated
 
 		public override NetworkObject CreateNetworkObject(NetWorker networker, int createCode, byte[] metadata = null)
 		{
-			return new ExampleProximityPlayerNetworkObject(networker, this, createCode, metadata);
+			return new NetworkGameManagerNetworkObject(networker, this, createCode, metadata);
 		}
 
 		protected override void InitializedTransform()
@@ -97,11 +95,6 @@ namespace BeardedManStudios.Forge.Networking.Generated
 			networkObject.SnapInterpolations();
 		}
 
-		/// <summary>
-		/// Arguments:
-		/// Color color
-		/// </summary>
-		public abstract void SendColor(RpcArgs args);
 
 		// DO NOT TOUCH, THIS GETS GENERATED PLEASE EXTEND THIS CLASS IF YOU WISH TO HAVE CUSTOM CODE ADDITIONS
 	}
