@@ -47,6 +47,14 @@ MonoBehaviour:
   - {fileID: 1000012738253334, guid: feb25ecf90a8d8b4ab922a455249997b, type: 2}
   NetworkCameraNetworkObject:
   - {fileID: 139536, guid: 661f29f0c0c86fa47b6015bd602d0ac6, type: 2}
+  NetworkComponentDisablerNetworkObject: []
+  NetworkControlledEntityNetworkObject:
+  - {fileID: 1693003427640658, guid: f6ec7b64ec2c359468c4af7a439cc295, type: 2}
+  NetworkedInputControllerNetworkObject:
+  - {fileID: 1884404403166990, guid: 198b35e5f67f9d045a443b231bd80955, type: 2}
+  NetworkGameManagerNetworkObject: []
+  SpawnManagerNetworkObject:
+  - {fileID: 1806224541294406, guid: 9567f3570b77ceb4ea2b51ba3b4e7489, type: 2}
   TestNetworkObject: []
   automaticScenes: 1
 --- !u!1001 &100100000
